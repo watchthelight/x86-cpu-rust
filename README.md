@@ -9,8 +9,6 @@ Modular x86 CPU logical simulator implemented in Rust. This workspace provides:
 
 Status: pre-1.0. APIs may evolve. See CHANGELOG for details.
 
-[![CI](https://github.com/watchthelight/x86-cpu-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/watchthelight/x86-cpu-rust/actions/workflows/ci.yml)
-[![docs.rs](https://docs.rs/cpu-core/badge.svg)](https://docs.rs/cpu-core)
 ![MSRV](https://img.shields.io/badge/MSRV-1.79-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT--0-green.svg)
 
