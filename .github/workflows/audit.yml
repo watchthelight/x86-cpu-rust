@@ -1,0 +1,23 @@
+name: Audit
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch: {}
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Install cargo-audit
+        run: cargo install cargo-audit --locked
+      - name: Install cargo-deny
+        run: cargo install cargo-deny --locked
+      - name: cargo-audit
+        run: cargo audit --db-urls https://github.com/RustSec/advisory-db.git
+      - name: cargo-deny
+        run: cargo deny check
+

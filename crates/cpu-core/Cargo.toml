@@ -1,0 +1,17 @@
+[package]
+name = "cpu-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+bitflags = { workspace = true }
+serde = { workspace = true }
+smallvec = { workspace = true }
+log = { workspace = true }
+parking_lot = { workspace = true }
+mmu-tlb = { path = "../mmu-tlb" }
+
+[dev-dependencies]
+hex = { workspace = true }

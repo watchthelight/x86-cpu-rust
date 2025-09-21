@@ -1,0 +1,17 @@
+[package]
+name = "decoder"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+iced = ["dep:iced-x86"]
+
+[dependencies]
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+
+[dependencies.iced-x86]
+version = "1.21"
+optional = true
+

@@ -1,0 +1,17 @@
+# Rust
+target/
+**/*.rs.bk
+
+# Editors/IDEs
+.idea/
+.vscode/
+*.swp
+
+# Cargo
+.cargo/
+Cargo.lock
+
+# OS
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,11 @@
+[package]
+name = "mmu-tlb"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bitflags = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+smallvec = { workspace = true }
+

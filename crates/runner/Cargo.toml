@@ -1,0 +1,24 @@
+[package]
+name = "runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+env_logger = { workspace = true }
+log = { workspace = true }
+cpu-core = { path = "../cpu-core" }
+decoder = { path = "../decoder" }
+fpu-simd = { path = "../fpu-simd" }
+mmu-tlb = { path = "../mmu-tlb" }
+apic = { path = "../apic" }
+devices-io = { path = "../devices-io" }
+sys = { path = "../sys" }
+loaders = { path = "../loaders" }
+dbg-gdb = { path = "../dbg-gdb" }
+
+[[bin]]
+name = "x86-sim"
+path = "src/main.rs"
+

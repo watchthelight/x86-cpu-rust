@@ -1,0 +1,10 @@
+[package]
+name = "fpu-simd"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+bitflags = { workspace = true }
+thiserror = { workspace = true }
+

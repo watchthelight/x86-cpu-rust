@@ -1,0 +1,47 @@
+[workspace]
+members = [
+    "crates/cpu-core",
+    "crates/decoder",
+    "crates/fpu-simd",
+    "crates/mmu-tlb",
+    "crates/apic",
+    "crates/devices-io",
+    "crates/sys",
+    "crates/loaders",
+    "crates/dbg-gdb",
+    "crates/runner",
+    "crates/tests",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT-0"
+rust-version = "1.79"
+repository = "https://github.com/watchthelight/x86-cpu-rust"
+homepage = "https://github.com/watchthelight/x86-cpu-rust"
+documentation = "https://docs.rs/cpu-core"
+readme = "README.md"
+description = "A modular, multi-crate x86 CPU logical simulator with segmentation, paging, TLB, and system support."
+keywords = ["x86", "cpu", "emulator", "paging", "segmentation"]
+categories = ["emulators", "simulation", "hardware-support"]
+
+[workspace.dependencies]
+anyhow = "1.0"
+thiserror = "1.0"
+bitflags = { version = "2.4", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+smallvec = "1.13"
+clap = { version = "4.5", features = ["derive"] }
+log = "0.4"
+env_logger = "0.11"
+once_cell = "1.19"
+parking_lot = "0.12"
+hex = "0.4"
+
+[workspace.metadata.docs]
+default-target = "x86_64-unknown-linux-gnu"
+
+[workspace.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["-D", "warnings"]
